@@ -1,54 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda | Cuidado Personal y Hogar</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header class="topbar">
-  <div class="logo">TU LOGO</div>
-  <div class="menu">☰</div>
+  <div class="logo">Mi Tienda</div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <img src="img/hero.jpg" alt="Promoción" />
+  <img src="img/hero.jpg" alt="Hero banner">
   <div class="hero-text">Belleza • Fragancias • Hogar</div>
 </section>
 
 <h2 class="section-title">Categorías</h2>
 
 <section class="categories">
+  <div class="card" onclick="goToCategory('perfumes')">
+    <img src="img/perfumes.jpg" alt="Perfumes">
+    <span>Perfumes</span>
+  </div>
 
-  <a href="category.html?cat=perfumes" class="card">
-    <img src="img/perfumes.jpg" />
-    <h3>Perfumes</h3>
-  </a>
+  <div class="card" onclick="goToCategory('cremas')">
+    <img src="img/cremas.jpg" alt="Cremas">
+    <span>Cremas</span>
+  </div>
 
-  <a href="category.html?cat=cremas" class="card">
-    <img src="img/cremas.jpg" />
-    <h3>Cremas & Cuidado</h3>
-  </a>
+  <div class="card" onclick="goToCategory('kids')">
+    <img src="img/kids.jpg" alt="Niños">
+    <span>Niños</span>
+  </div>
 
-  <a href="category.html?cat=kids" class="card">
-    <img src="img/kids.jpg" />
-    <h3>Niños</h3>
-  </a>
-
-  <a href="category.html?cat=hogar" class="card">
-    <img src="img/hogar.jpg" />
-    <h3>Hogar</h3>
-  </a>
-
+  <div class="card" onclick="goToCategory('hogar')">
+    <img src="img/hogar.jpg" alt="Hogar">
+    <span>Hogar</span>
+  </div>
 </section>
-
-<footer class="footer">
-  © 2025 - Tu Tienda Online
-</footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-
