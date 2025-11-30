@@ -163,7 +163,7 @@ body{
 
 /* Imagen centrada y uniforme */
 .product-card img {
-  width: 100%;
+ /* width: 100%;*/
   height: 230px;
   object-fit: contain;   /* NO recorta: ideal para productos tipo cosméticos */
   object-position: center;
@@ -290,6 +290,7 @@ body{
   .categories{ grid-template-columns: repeat(3, 1fr); padding:16px 20px; }
   .product-list{ grid-template-columns: repeat(2, 1fr); padding:16px 20px; }
 }
+
 
 
 
