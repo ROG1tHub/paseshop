@@ -212,10 +212,10 @@ img { display: block; }
    PRODUCT GRID (CATEGORY)
 ====================================================== */
 #product-list {
-  padding: 20px;
+  padding: 20px 24px; /* Aumentado padding lateral para márgenes */
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  gap: 16px;
+  gap: 20px; /* Aumentado gap para más separación entre cards */
 }
 
 .product-card {
@@ -223,7 +223,7 @@ img { display: block; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 12px;
-  text-align: center;
+  text-align: left; /* Cambiado a left para alinear texto al margen */
   position: relative;
   transition: 0.3s;
 }
@@ -250,7 +250,6 @@ img { display: block; }
 .product-card:hover .img-wrapper img {
   transform: scale(1.08);
 }
-
 
 /* Favorito */
 .fav-btn {
@@ -322,6 +321,14 @@ img { display: block; }
   cursor: pointer;
 }
 
+/* Título de sección (para category.html) */
+.section-title {
+  padding: 0 24px; /* Márgenes laterales iguales a #product-list */
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
 /* ======================================================
    MODAL CARRITO
 ====================================================== */
@@ -374,7 +381,7 @@ img { display: block; }
 ====================================================== */
 @media (min-width: 768px) {
   #product-list {
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr); /* Cambiado a 4 cards por fila */
   }
 
   .categories {
@@ -385,7 +392,3 @@ img { display: block; }
     height: 350px;
   }
 }
-
-
-
-
