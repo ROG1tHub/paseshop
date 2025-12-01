@@ -1,52 +1,3 @@
-/*
-      name: "Sweet Honesty",
-      description: "Desodorante Roll-On Sweet Honesty Treasures",
-      price: 2850,
-      oldPrice: 3800,
-      discount: 25,
-      img: "img/desodorante1.jpg"
-    },
-    {
-      name: "Pur Blanca",
-      description: "Desodorante anti-transpirante roll-on con el mismo aroma del perfume Pur Blanca.",
-      price: 2850,
-      oldPrice: 3800,
-      discount: 25,
-      img: "img/desodorante2.jpg"
-    },
-    {
-      name: "Lov/u",
-      description: "Desodorante Roll-On Love u",
-      price: 1900,
-      oldPrice: 3800,
-      discount: 50,
-      img: "img/desodorante3.jpg"
-    },
-    {
-      name: "Toque De Amor",
-      description: "Desodorante Antitranspirante Roll-on",
-      price: 2850,
-      oldPrice: 3800,
-      discount: 25,
-      img: "img/desodorante4.jpg"
-    },
-    {
-      name: "Sweet Honesty",
-      description: "Desodorante Roll-On Sweet Honesty",
-      price: 2850,
-      oldPrice: 3800,
-      discount: 25,
-      img: "img/desodorante5.jpg"
-    },
-    {
-      name: "On Duty",
-      description: "Desodorantes Roll On On Duty Care Minimizador de Vello",
-      price: 3080,
-      oldPrice: 5600,
-      discount: 45,
-      img: "img/desodorante6.jpg"
-    }
-  ]*/
 
  // ====== LISTA DE PRODUCTOS (EJEMPLO) ======
 const products = {
@@ -55,7 +6,12 @@ const products = {
         { name: "Aroma Sport", desc: "Fragancia fresca y activa", price: 9000, oldPrice: null, img: "img/perfume2.jpg", fav: false }
     ],
     cremas: [
-        { name: "Crema Hidratante", desc: "Piel suave todo el día", price: 7000, oldPrice: 8500, img: "img/cremas.jpg", fav: false }
+        { name: "Sweet Honesty", desc: "Desodorante Roll-On Sweet Honesty Treasures", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante1.jpg", fav: false },
+          { name: "Pur Blanca", desc: "Desodorante anti-transpirante roll-on con el mismo aroma del perfume Pur Blanca.", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante2.jpg ", fav: false },
+          { name: "CLov/u", desc: "Desodorante Roll-On Love u", price: 1900, oldPrice: 3800, discount: 50, img: "img/desodorante3.jpg ", fav: false },
+          { name: "Toque De Amor", desc: "Desodorante Antitranspirante Roll-on", price: 2850, oldPrice: 3800, img: "img/desodorante4.jpg", fav: false },
+          { name: "Sweet Honesty", desc: "Desodorante Roll-On Sweet Honesty", price: 2850, oldPrice: 3800, img: "img/desodorante5.jpg", fav: false },
+          { name: "On Duty", desc: "Desodorantes Roll On On Duty Care Minimizador de Vello", price: 3080, oldPrice: 5600,discount: 45, img: "img/desodorante6.jpg", fav: false },
     ],
     kids: [
         { name: "Colonia Kids", desc: "Aroma suave para niños", price: 5000, oldPrice: null, img: "img/kids.jpg", fav: false }
@@ -169,3 +125,4 @@ toggle.addEventListener("change", () => {
     document.body.classList.toggle("dark");
     localStorage.setItem("darkMode", toggle.checked);
 });
+
