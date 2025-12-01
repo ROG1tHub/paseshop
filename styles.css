@@ -50,12 +50,14 @@ img { display: block; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 18px;
+  padding: 12px 50px; /* Cambiado a 50px lateral para más separación */
   background: var(--card);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 100; /* Aumentado para asegurar que esté fijo por encima */
+  width: 100%; /* Asegurar ancho completo */
+  box-sizing: border-box; /* Reforzado para mobile */
 }
 
 .logo {
@@ -178,7 +180,7 @@ img { display: block; }
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 14px;
-  padding: 14px 18px;
+  padding: 14px 50px; /* Cambiado a 50px lateral para más separación */
 }
 
 .card {
@@ -212,7 +214,7 @@ img { display: block; }
    PRODUCT GRID (CATEGORY)
 ====================================================== */
 #product-list {
-  padding: 20px 32px; /* Aumentado padding lateral para más separación de bordes */
+  padding: 20px 50px; /* Cambiado a 50px lateral para más separación */
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 20px;
@@ -244,7 +246,7 @@ img { display: block; }
   height: 100%;
   object-fit: cover;
   transition: transform 0.35s ease;
-  border-radius: 8px; /* Redondeo específico para las imágenes de productos */
+  border-radius: 8px;
 }
 
 /* Efecto zoom suave */
@@ -311,20 +313,21 @@ img { display: block; }
 
 /* Botón */
 .add-btn {
-  width: 100%;
-  padding: 10px; /* Achicado el padding */
+  width: 85%; /* Achicado a 85% para reducir ancho */
+  padding: 10px;
   background: var(--primary);
   border: none;
   border-radius: 26px;
   color: white;
-  margin-top: 16px; /* Más margen superior para separación */
+  margin: 16px auto 0; /* Centrado con auto */
   font-weight: bold;
   cursor: pointer;
+  display: block; /* Para centrar con margin auto */
 }
 
 /* Título de sección (para category.html) */
 .section-title {
-  padding: 0 32px; /* Márgenes laterales aumentados para coincidir */
+  padding: 0 50px; /* Cambiado a 50px lateral para más separación */
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 16px;
@@ -378,6 +381,16 @@ img { display: block; }
 }
 
 /* ======================================================
+   FOOTER
+====================================================== */
+footer {
+  padding: 16px 50px; /* Cambiado a 50px lateral para más separación */
+  text-align: center;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+}
+
+/* ======================================================
    RESPONSIVE
 ====================================================== */
 @media (min-width: 768px) {
@@ -397,6 +410,22 @@ img { display: block; }
 /* Ajustes específicos para mobile (header al rotar) */
 @media (max-width: 767px) {
   .topbar {
-    padding: 12px 20px; /* Padding lateral aumentado para ocupar mejor el espacio en landscape */
+    padding: 12px 20px; /* Mantengo 20px en mobile para no exagerar, pero ajusta si quieres 50px */
+  }
+
+  .categories {
+    padding: 14px 20px; /* Mantengo 20px en mobile */
+  }
+
+  #product-list {
+    padding: 20px 20px; /* Mantengo 20px en mobile */
+  }
+
+  .section-title {
+    padding: 0 20px; /* Mantengo 20px en mobile */
+  }
+
+  footer {
+    padding: 16px 20px; /* Mantengo 20px en mobile */
   }
 }
