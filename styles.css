@@ -39,6 +39,7 @@ body {
   font-family: Inter, system-ui, Arial, sans-serif;
   color: var(--text);
   transition: background var(--transition), color var(--transition);
+  overflow-x: hidden; /* Agregado para prevenir scroll horizontal en mobile */
 }
 
 img { display: block; }
@@ -171,6 +172,13 @@ img { display: block; }
   background: rgba(0,0,0,0.45);
   border-radius: 16px;
   font-weight: 700;
+}
+
+/* ======================================================
+   MAIN (para compensar header fijo en mobile)
+====================================================== */
+main {
+  padding-top: 0; /* Por defecto 0 en desktop */
 }
 
 /* ======================================================
@@ -343,7 +351,7 @@ img { display: block; }
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.45);
-  z-index: 99;
+  z-index: 1000; /* Aumentado para asegurar que esté por encima en mobile */
   justify-content: center;
   align-items: center;
 }
@@ -407,11 +415,20 @@ footer {
   }
 }
 
-/* Ajustes específicos para mobile (header fijo al scroll) */
+/* Ajustes específicos para mobile (header fijo al scroll y modal) */
 @media (max-width: 767px) {
   .topbar {
     position: fixed; /* Cambiado a fixed en mobile para evitar el "correo" al scroll */
     padding: 12px 20px; /* Mantengo 20px en mobile para no exagerar */
+  }
+
+  main {
+    padding-top: 60px; /* Agregado para compensar el header fijo */
+  }
+
+  .modal {
+    display: none; /* Reinicio */
+    z-index: 1000; /* Reforzado */
   }
 
   .categories {
