@@ -11,13 +11,15 @@
 <!-- ============ HEADER UNIFICADO ============ -->
 <header class="topbar">
 
-  <!-- Botón volver -->
-  <a href="index.html" class="back-btn" style="font-size: 22px; text-decoration:none;">←</a>
+  <!-- Volver -->
+  <a href="index.html" class="back-btn" style="font-size: 22px; text-decoration:none; color:var(--accent);">
+    ←
+  </a>
 
   <!-- Logo -->
   <div class="logo">Mi Tienda</div>
 
-  <!-- Acciones derecha -->
+  <!-- Acciones -->
   <div class="top-actions">
 
     <!-- SWITCH DARK MODE -->
@@ -30,13 +32,12 @@
     </div>
 
     <!-- CARRITO -->
-    <button id="open-cart" class="cart-btn" onclick="openCart()">
+    <button id="open-cart" class="cart-btn">
       🛒
       <span id="cart-bubble" class="cart-bubble">0</span>
     </button>
 
   </div>
-
 </header>
 
 
@@ -58,10 +59,9 @@
 
     <div id="cart-items"></div>
 
-    <button class="checkout-btn">Finalizar compra</button>
+    <button class="checkout-btn" id="checkout-btn">Finalizar compra</button>
   </div>
 </div>
-
 
 <script src="script.js"></script>
 </body>
