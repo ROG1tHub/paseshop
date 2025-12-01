@@ -13,20 +13,25 @@ window.goToCategory = function(cat) {
 
 /* ---------- productos (tu listado) ---------- */
 const products = {
-  perfumes: [
-    { name: "Perfume Exclusivo", desc: "Aroma floral elegante", price: 12000, oldPrice: 15000, img: "img/perfume1.jpg" },
+ perfumes: [
+    { name: "Perfume Exclusivo", desc: "Aroma floral elegante para hombres", price: 12000, oldPrice: 15000, img: "img/perfume1.jpg" },
     { name: "Aroma Mujer", desc: "Fragancia fresca y activa", price: 9000, oldPrice: null, img: "img/perfume2.jpg" }
   ],
   cremas: [
-    { name: "Sweet Honesty Treas.", desc: "Desodorante Roll-On", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante1.jpg" },
-    { name: "Pur Blanca", desc: "Aroma Pur Blanca", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante2.jpg" },
-    { name: "Love U", desc: "Desodorante Love U", price: 1900, oldPrice: 3800, discount: 50, img: "img/desodorante3.jpg" }
+    { name: "Sweet Honesty Treasures", desc: "Desodorante Roll-On Sweet Honesty Treasures", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante1.jpg" },
+    { name: "Pur Blanca", desc: "Desodorante roll-on con aroma del perfume Pur Blanca.", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante2.jpg" },
+    { name: "Love U", desc: "Desodorante Roll-On Love U", price: 1900, oldPrice: 3800, discount: 50, img: "img/desodorante3.jpg" },
+    { name: "Toque de Amor", desc: "Desodorante Antitranspirante Roll-on", price: 2850, oldPrice: 3800, img: "img/desodorante4.jpg" },
+    { name: "Sweet Honesty", desc: "Desodorante Roll-On Sweet Honesty", price: 2850, oldPrice: 3800, img: "img/desodorante5.jpg" },
+    { name: "On Duty", desc: "Desodorante On Duty Care Minimizador de Vello", price: 3080, oldPrice: 5600, discount: 45, img: "img/desodorante6.jpg" }
   ],
   kids: [
-    { name: "Recipiente unicornio", desc: "Lunchera", price: 5000, img: "img/kids1.jpg" }
+    { name: "Recipiente unicornio", desc: "Lunchera para niñas", price: 5000, oldPrice: null, img: "img/kids1.jpg" },
+    { name: "Sábana M Kids", desc: "Estampado para niños", price: 5000, oldPrice: null, img: "img/kids2.jpg" }
   ],
   hogar: [
-    { name: "Organizador Multiuso", desc: "Para la casa", price: 4500, img: "img/hogar1.jpg" }
+    { name: "Organizador Multiuso", desc: "Ideal para habitación", price: 4500, oldPrice: null, img: "img/hogar1.jpg" },
+    { name: "Dispenser de jabón líquido", desc: "Ideal para cocina o baño", price: 4500, oldPrice: null, img: "img/hogar2.jpg" }
   ]
 };
 
@@ -250,3 +255,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   log("Inicialización completa");
 });
+
