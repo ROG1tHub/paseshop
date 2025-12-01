@@ -212,10 +212,10 @@ img { display: block; }
    PRODUCT GRID (CATEGORY)
 ====================================================== */
 #product-list {
-  padding: 20px 24px; /* Aumentado padding lateral para márgenes */
+  padding: 20px 32px; /* Aumentado padding lateral para más separación de bordes */
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  gap: 20px; /* Aumentado gap para más separación entre cards */
+  gap: 20px;
 }
 
 .product-card {
@@ -223,7 +223,7 @@ img { display: block; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 12px;
-  text-align: left; /* Cambiado a left para alinear texto al margen */
+  text-align: left;
   position: relative;
   transition: 0.3s;
 }
@@ -239,11 +239,12 @@ img { display: block; }
   border-radius: 10px;
 }
 
-/* Imagen centrada con zoom */
+/* Imagen centrada con zoom y redondeada */
 .product-card .img-wrapper img {
   height: 100%;
   object-fit: cover;
   transition: transform 0.35s ease;
+  border-radius: 8px; /* Redondeo específico para las imágenes de productos */
 }
 
 /* Efecto zoom suave */
@@ -311,19 +312,19 @@ img { display: block; }
 /* Botón */
 .add-btn {
   width: 100%;
-  padding: 12px;
+  padding: 10px; /* Achicado el padding */
   background: var(--primary);
   border: none;
   border-radius: 26px;
   color: white;
-  margin-top: 12px;
+  margin-top: 16px; /* Más margen superior para separación */
   font-weight: bold;
   cursor: pointer;
 }
 
 /* Título de sección (para category.html) */
 .section-title {
-  padding: 0 24px; /* Márgenes laterales iguales a #product-list */
+  padding: 0 32px; /* Márgenes laterales aumentados para coincidir */
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 16px;
@@ -381,7 +382,7 @@ img { display: block; }
 ====================================================== */
 @media (min-width: 768px) {
   #product-list {
-    grid-template-columns: repeat(4,1fr); /* Cambiado a 4 cards por fila */
+    grid-template-columns: repeat(4,1fr);
   }
 
   .categories {
@@ -390,5 +391,12 @@ img { display: block; }
 
   .hero img {
     height: 350px;
+  }
+}
+
+/* Ajustes específicos para mobile (header al rotar) */
+@media (max-width: 767px) {
+  .topbar {
+    padding: 12px 20px; /* Padding lateral aumentado para ocupar mejor el espacio en landscape */
   }
 }
