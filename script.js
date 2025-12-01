@@ -18,7 +18,7 @@ const products = {
   perfumes: [
     { 
       name: "Musk", 
-      desc: "Perfume de Hombre Musk+ Air", 
+      desc: "Perfume de Hombre Musk+ Air. Contenido: 75 ml.", 
       price: 14820, 
       oldPrice: 24700, 
       discount: 40, 
@@ -105,6 +105,24 @@ const products = {
       discount: 25,
       img: "img/desodorante12.jpg",
       fav: false
+    }, 
+    { 
+      name: "Wild Country", 
+      desc: "Colonia refrescante con el mismo perfume de Wild Country. Contenido: 150ml.", 
+      price: 6700, 
+      oldPrice: null, 
+      discount: null,
+      img: "img/colonia1.jpg",
+      fav: false
+    }, 
+    { 
+      name: "Legacy", 
+      desc: "Colonia Refrescante 150ml.", 
+      price: 7000, 
+      oldPrice: null, 
+      discount: null,
+      img: "img/colonia2.jpg",
+      fav: false
     }
   ],
 
@@ -159,6 +177,33 @@ const products = {
       oldPrice: 5600, 
       discount: 45, 
       img: "img/desodorante6.jpg",
+      fav: false
+    },
+    { 
+      name: "Sweet Honesty", 
+      desc: "Colonia Refrescante de Mujer 150ml.", 
+      price: 4200, 
+      oldPrice: 7000, 
+      discount: 40, 
+      img: "img/colonia3.jpg",
+      fav: false
+    },
+    { 
+      name: "Pasión Gitana", 
+      desc: "Colonia Refrescante de Mujer 150ml.", 
+      price: 7000, 
+      oldPrice: null, 
+      discount: null,
+      img: "img/colonia4.jpg",
+      fav: false
+    },
+    { 
+      name: "Imari", 
+      desc: "Colonia Refrescante de Mujer 150ml.", 
+      price: 7000, 
+      oldPrice: null, 
+      discount: null,
+      img: "img/colonia5.jpg",
       fav: false
     }
   ],
@@ -414,6 +459,7 @@ const products = {
     console.error("[miTienda] Fatal error in script:", err);
   }
 })();
+
 
 
 
