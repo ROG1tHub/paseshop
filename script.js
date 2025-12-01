@@ -3,6 +3,17 @@
    ------------------------------------------------------------
    REQUIERE: <script src="products.js"></script> ANTES de script.js
 ===============================================================*/
+const categoryNames = {
+  hombre: "Hombre",
+  mujer: "Mujer",
+  cuidado: "Cuidado Personal",
+  hogarestilo: "Hogar & Estilo"
+};
+
+if (title) {
+  title.textContent = categoryNames[currentCategory] || "Categoría";
+}
+
 
 (function () {
   const LOG = (...a) => console.log("[tienda]", ...a);
@@ -307,3 +318,4 @@
   });
 
 })();
+
