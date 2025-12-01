@@ -8,51 +8,33 @@
 </head>
 <body>
 
-<!-- ============ MODAL CARRITO GLOBAL ============ -->
-<div id="cart-modal" class="modal">
+<!-- MODAL CARRITO (global) -->
+<div id="cart-modal" class="modal" style="display:none">
   <div class="modal-content">
     <span id="close-cart" class="close">&times;</span>
     <h2>Mi Carrito</h2>
-
     <div id="cart-items"></div>
-
-    <button class="checkout-btn">Finalizar compra</button>
+    <button class="checkout-btn" id="checkout-btn">Finalizar compra</button>
   </div>
 </div>
 
-<!-- ============ HEADER / TOPBAR ============ -->
 <header class="topbar">
-
-  <!-- LOGO -->
   <div class="logo">Mi Tienda</div>
-
-  <!-- ACCIONES DERECHA -->
   <div class="top-actions">
-
-    <!-- SWITCH MODO OSCURO -->
     <div class="darkmode-switch">
-      <input type="checkbox" id="darkToggle">
+      <input type="checkbox" id="darkToggle" />
       <label for="darkToggle" class="switch">
-        <span class="sun">☀️</span>
-        <span class="moon">🌙</span>
+        <span class="sun">☀️</span><span class="moon">🌙</span>
       </label>
     </div>
 
-    <!-- BOTÓN DEL CARRITO -->
     <button id="open-cart" class="cart-btn">
-      🛒
-      <span id="cart-bubble" class="cart-bubble">0</span>
+      🛒 <span id="cart-bubble" class="cart-bubble" style="display:none">0</span>
     </button>
-
   </div>
-
 </header>
 
-
-<!-- ============ CONTENIDO PRINCIPAL ============ -->
 <main>
-
-  <!-- HERO -->
   <section class="hero">
     <img src="img/hero.jpg" alt="Hero banner" />
     <div class="hero-text">Belleza • Fragancias • Hogar</div>
@@ -60,41 +42,29 @@
 
   <h2 class="section-title">Categorías</h2>
 
-  <!-- CATEGORÍAS -->
   <section class="categories">
-
     <div class="card" onclick="goToCategory('perfumes')">
       <img src="img/perfumes.jpg" alt="Perfumes" />
       <span>Perfumes</span>
     </div>
-
     <div class="card" onclick="goToCategory('cremas')">
       <img src="img/cremas.jpg" alt="Cremas" />
       <span>Cremas & Cuidado</span>
     </div>
-
     <div class="card" onclick="goToCategory('kids')">
       <img src="img/kids.jpg" alt="Niños" />
       <span>Niños</span>
     </div>
-
     <div class="card" onclick="goToCategory('hogar')">
       <img src="img/hogar.jpg" alt="Hogar" />
       <span>Hogar</span>
     </div>
-
   </section>
-
 </main>
 
-<!-- ============ FOOTER ============ -->
-<footer class="footer">
-  © <span id="year"></span> · Mi Tienda
-</footer>
+<footer class="footer">© <span id="year"></span> · Mi Tienda</footer>
 
 <script src="script.js"></script>
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
