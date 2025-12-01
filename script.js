@@ -1,27 +1,4 @@
-// ======================================================
-//                  DATOS DE PRODUCTOS
-// ======================================================
-
-const products = {
-  perfumes: [
-    {
-      name: "On Duty",
-      description: "Desodorante Roll On Minimiza Vello",
-      price: 3080,
-      oldPrice: 3800,
-      discount: 25,
-      img: "img/perfume1.jpg"
-    },
-    {
-      name: "Colonia Fresh",
-      description: "Aroma cítrico para uso diario",
-      price: 2500,
-      img: "img/perfume2.jpg"
-    }
-  ],
-
-  cremas: [
-    {
+/*
       name: "Sweet Honesty",
       description: "Desodorante Roll-On Sweet Honesty Treasures",
       price: 2850,
@@ -69,198 +46,126 @@ const products = {
       discount: 45,
       img: "img/desodorante6.jpg"
     }
-  ],
+  ]*/
 
-  kids: [
-    {
-      name: "Shampoo Kids",
-      description: "Sin lágrimas",
-      price: 2200,
-      img: "img/kids1.jpg"
-    }
-  ],
-
-  hogar: [
-    {
-      name: "Recipiente Hermético",
-      description: "Plástico resistente",
-      price: 1800,
-      img: "img/hogar1.jpg"
-    }
-  ]
+ // ====== LISTA DE PRODUCTOS (EJEMPLO) ======
+const products = {
+    perfumes: [
+        { name: "Perfume Exclusivo", desc: "Aroma floral elegante", price: 12000, oldPrice: 15000, img: "img/perfumes.jpg", fav: false },
+        { name: "Aroma Sport", desc: "Fragancia fresca y activa", price: 9000, oldPrice: null, img: "img/perfume2.jpg", fav: false }
+    ],
+    cremas: [
+        { name: "Crema Hidratante", desc: "Piel suave todo el día", price: 7000, oldPrice: 8500, img: "img/cremas.jpg", fav: false }
+    ],
+    kids: [
+        { name: "Colonia Kids", desc: "Aroma suave para niños", price: 5000, oldPrice: null, img: "img/kids.jpg", fav: false }
+    ],
+    hogar: [
+        { name: "Organizador Multiuso", desc: "Para cocina o baño", price: 4500, oldPrice: null, img: "img/hogar.jpg", fav: false }
+    ]
 };
 
+// Detectar categoría
+const urlParams = new URLSearchParams(window.location.search);
+const currentCategory = urlParams.get("cat");
 
-// ======================================================
-//                     FAVORITOS
-// ======================================================
-
-let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
-function toggleFavorite(id) {
-  if (favorites.includes(id)) {
-    favorites = favorites.filter(f => f !== id);
-  } else {
-    favorites.push(id);
-  }
-
-  localStorage.setItem("favorites", JSON.stringify(favorites));
-  renderProducts(currentCategory);
-}
-
-
-// ======================================================
-//                      CARRITO
-// ======================================================
-
+// Carrito y favoritos
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-function addToCart(productId) {
-  const [category, index] = productId.split("-");
-  const p = products[category][index];
-
-  cart.push(p);
-  localStorage.setItem("cart", JSON.stringify(cart));
-
-  updateCartBubble();
-}
-
-function updateCartBubble() {
-  const bubble = document.getElementById("cart-count");
-  if (bubble) bubble.textContent = cart.length;
-}
+let favorites = JSON.parse(localStorage.getItem("favorites")) || {};
 
 updateCartBubble();
 
-
-// ======================================================
-//                 MODAL DEL CARRITO
-// ======================================================
-
-const modal = document.getElementById("cart-modal");
-const openCart = document.getElementById("open-cart");
-const closeCart = document.getElementById("close-cart");
-const cartItems = document.getElementById("cart-items");
-
-if (openCart) {
-  openCart.onclick = () => {
-    modal.style.display = "block";
-    renderCartModal();
-  };
-}
-
-if (closeCart) {
-  closeCart.onclick = () => modal.style.display = "none";
-}
-
-window.onclick = (e) => {
-  if (e.target === modal) modal.style.display = "none";
-};
-
-function renderCartModal() {
-  cartItems.innerHTML = "";
-
-  if (cart.length === 0) {
-    cartItems.innerHTML = "<p>Tu bolsa está vacía.</p>";
-    return;
-  }
-
-  cart.forEach(p => {
-    cartItems.innerHTML += `
-      <div class="cart-item">
-        <img src="${p.img}">
-        <div>
-          <strong>${p.name}</strong><br>
-          $${p.price.toLocaleString()}
-        </div>
-      </div>
-    `;
-  });
-}
-
-
-// ======================================================
-//                   CHECKOUT WHATSAPP
-// ======================================================
-
-const checkout = document.getElementById("checkout-btn");
-
-if (checkout) {
-  checkout.onclick = () => {
-    if (cart.length === 0) return;
-
-    const text = cart
-      .map(p => `• ${p.name} - $${p.price.toLocaleString()}`)
-      .join("%0A");
-
-    const phone = "5492474568933";
-
-    window.open(
-      `https://wa.me/${phone}?text=Hola! Me gustaría comprar:%0A${text}`,
-      "_blank"
-    );
-  };
-}
-
-
-// ======================================================
-//                RENDERIZAR PRODUCTOS
-// ======================================================
-
-let currentCategory = null;
-
+// ====== RENDER ======
 function renderProducts(category) {
-  currentCategory = category;
+    const container = document.getElementById("product-list");
+    container.innerHTML = "";
 
-  const container = document.getElementById("products-container");
-  const title = document.getElementById("category-title");
+    products[category].forEach((p, index) => {
+        const id = `${category}-${index}`;
+        const favActive = favorites[id] ? "fav-active" : "";
 
-  if (!container) return;
+        container.innerHTML += `
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="${p.img}" alt="${p.name}">
+                    <button class="fav-btn ${favActive}" onclick="toggleFavorite('${id}')">♥</button>
+                </div>
+        
+                <h3>${p.name}</h3>
+                <p>${p.desc}</p>
+                
+                <div class="price-box">
+                    ${p.oldPrice ? `<span class="old-price">$${p.oldPrice}</span>` : ""}
+                    <span class="price">$${p.price}</span>
+                </div>
 
-  title.textContent = category.toUpperCase();
-  container.innerHTML = "";
-
-  products[category].forEach((p, index) => {
-    const id = `${category}-${index}`;
-    const isFav = favorites.includes(id);
-
-    container.innerHTML += `
-      <div class="product-card">
-
-        ${p.discount ? `<div class="discount-tag">-${p.discount}%</div>` : ""}
-
-        <div class="favorite-btn ${isFav ? "active" : ""}" onclick="toggleFavorite('${id}')">
-          ❤
-        </div>
-
-        <img src="${p.img}" alt="${p.name}">
-
-        <div class="product-name">${p.name}</div>
-        <div class="product-desc">${p.description}</div>
-
-        <div class="price-box">
-          ${p.oldPrice ? `<div class="old-price">$${p.oldPrice.toLocaleString()}</div>` : ""}
-          <div class="new-price">$${p.price.toLocaleString()}</div>
-        </div>
-
-        <button class="add-btn" onclick="addToCart('${id}')">
-          agregar a mi bolsa
-        </button>
-      </div>
-    `;
-  });
+                <button class="add-btn" onclick="addToCart('${id}')">Agregar al carrito 🛒</button>
+            </div>
+        `;
+    });
 }
 
+if (currentCategory) renderProducts(currentCategory);
 
-// ======================================================
-//         DETECTAR CATEGORÍA AL CARGAR LA PÁGINA
-// ======================================================
+// ====== FAVORITOS ======
+function toggleFavorite(id) {
+    favorites[id] = !favorites[id];
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+    renderProducts(currentCategory);
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const cat = params.get("cat");
+// ====== CARRITO ======
+function addToCart(id) {
+    const [cat, index] = id.split("-");
+    const product = products[cat][index];
 
-  if (cat && products[cat]) {
-    renderProducts(cat);
-  }
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartBubble();
+}
+
+function updateCartBubble() {
+    const bubble = document.getElementById("cart-bubble");
+    if (bubble) bubble.textContent = cart.length;
+}
+
+// ====== MODAL CARRITO ======
+const modal = document.getElementById("cart-modal");
+const closeBtn = document.getElementById("close-cart");
+
+function openCart() {
+    modal.style.display = "flex";
+    renderCartItems();
+}
+
+function renderCartItems() {
+    const box = document.getElementById("cart-items");
+    box.innerHTML = "";
+
+    cart.forEach((item) => {
+        box.innerHTML += `
+            <div class="cart-item">
+                <strong>${item.name}</strong><br>
+                $${item.price}
+            </div>
+        `;
+    });
+}
+
+closeBtn.onclick = () => modal.style.display = "none";
+window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+
+// ====== MODO OSCURO AVON ======
+const toggle = document.getElementById("darkToggle");
+
+// Cargar preferencia
+if (localStorage.getItem("darkMode") === "true") {
+    toggle.checked = true;
+    document.body.classList.add("dark");
+}
+
+// Evento
+toggle.addEventListener("change", () => {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("darkMode", toggle.checked);
 });
