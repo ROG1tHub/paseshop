@@ -10,8 +10,8 @@ window.goToCategory = function(cat) {
 ====================================================== */
 const products = {
     perfumes: [
-        { name: "Perfume Exclusivo", desc: "Aroma floral elegante", price: 12000, oldPrice: 15000, img: "img/perfumes.jpg", fav: false },
-        { name: "Aroma Sport", desc: "Fragancia fresca y activa", price: 9000, oldPrice: null, img: "img/perfume2.jpg", fav: false }
+        { name: "Perfume Exclusivo", desc: "Aroma floral elegante para hombres", price: 12000, oldPrice: 15000, img: "img/perfume1.jpg", fav: false },
+        { name: "Aroma Mujer", desc: "Fragancia fresca y activa", price: 9000, oldPrice: null, img: "img/perfume2.jpg", fav: false }
     ],
     cremas: [
         { name: "Sweet Honesty Treasures", desc: "Desodorante Roll-On Sweet Honesty Treasures", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante1.jpg", fav: false },
@@ -22,10 +22,12 @@ const products = {
         { name: "On Duty", desc: "Desodorante On Duty Care Minimizador de Vello", price: 3080, oldPrice: 5600, discount: 45, img: "img/desodorante6.jpg", fav: false },
     ],
     kids: [
-        { name: "Colonia Kids", desc: "Aroma suave para niños", price: 5000, oldPrice: null, img: "img/kids.jpg", fav: false }
+        { name: "Recipiente unicornio", desc: "Lunchera para niñas", price: 5000, oldPrice: null, img: "img/kids1.jpg", fav: false },
+       { name: "sábana M Kids", desc: "Estampado para niños", price: 5000, oldPrice: null, img: "img/kids2.jpg", fav: false }
     ],
     hogar: [
-        { name: "Organizador Multiuso", desc: "Ideal para cocina o baño", price: 4500, oldPrice: null, img: "img/hogar.jpg", fav: false }
+        { name: "Organizador Multiuso", desc: "Ideal para habitación", price: 4500, oldPrice: null, img: "img/hogar1.jpg", fav: false },
+       { name: "Dispenser de jabón liquido", desc: "Ideal para cocina o baño", price: 4500, oldPrice: null, img: "img/hogar2.jpg", fav: false }
     ]
 };
 
@@ -158,3 +160,4 @@ if (darkToggle) {
         localStorage.setItem("darkMode", darkToggle.checked);
     });
 }
+
