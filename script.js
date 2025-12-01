@@ -10,11 +10,6 @@ const categoryNames = {
   hogarestilo: "Hogar & Estilo"
 };
 
-if (title) {
-  title.textContent = categoryNames[currentCategory] || "Categoría";
-}
-
-
 (function () {
   const LOG = (...a) => console.log("[tienda]", ...a);
 
@@ -221,8 +216,9 @@ if (title) {
     const zone = $("product-list");
     if (!zone) return;
 
-    $("category-title").textContent =
-      currentCat.charAt(0).toUpperCase() + currentCat.slice(1);
+    // Usar categoryNames para un título más legible
+    const title = categoryNames[currentCat] || currentCat.charAt(0).toUpperCase() + currentCat.slice(1);
+    $("category-title").textContent = title;
 
     zone.innerHTML = "";
 
@@ -318,4 +314,3 @@ if (title) {
   });
 
 })();
-
