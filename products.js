@@ -5,7 +5,7 @@
 
 const products = {
 
-  perfumes: [
+  hombre: [
     { name: "Musk", desc: "Perfume de Hombre Musk+ Air. 75 ml.", price: 14820, oldPrice: 24700, discount: 40, img: "img/perfume1.jpg" },
     { name: "300 km/h", desc: "Perfume para hombre 300 KM/H Electric. 100 ml.", price: 19470, oldPrice: 35400, discount: 45, img: "img/perfume2.jpg" },
     { name: "Exclusive", desc: "Perfume de Hombre Exclusive in Blue. 100 ml.", price: 36400, oldPrice: 56000, discount: 35, img: "img/perfume3.jpg" },
@@ -24,7 +24,7 @@ const products = {
     { name: "Legacy", desc: "Colonia refrescante 150ml.", price: 7000, oldPrice: null, img: "img/colonia2.jpg" }
   ],
 
-  cremas: [
+  mujer: [
     { name: "Sweet Honesty Treasures", desc: "Desodorante Roll-On", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante1.jpg" },
     { name: "Pur Blanca", desc: "Roll-on aroma Pur Blanca", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante2.jpg" },
     { name: "Love U", desc: "Desodorante Roll-On Love U", price: 1900, oldPrice: 3800, discount: 50, img: "img/desodorante3.jpg" },
@@ -38,14 +38,15 @@ const products = {
     { name: "Imari", desc: "Colonia 150ml", price: 7000, oldPrice: null, img: "img/colonia5.jpg" }
   ],
 
-  kids: [
+  cuidado: [
     { name: "Recipiente unicornio", desc: "Lunchera para niñas", price: 5000, img: "img/kids1.jpg" },
     { name: "Sábana M Kids", desc: "Estampado infantil", price: 5000, img: "img/kids2.jpg" }
   ],
 
-  hogar: [
+  hogarestilo: [
     { name: "Organizador Multiuso", desc: "Ideal para habitación", price: 4500, img: "img/hogar1.jpg" },
     { name: "Dispenser", desc: "Jabón líquido", price: 4500, img: "img/hogar2.jpg" }
   ]
 };
+
 
