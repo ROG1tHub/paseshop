@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<!-- ============ MODAL CARRITO (GLOBAL) ============ -->
+<!-- ============ MODAL CARRITO GLOBAL ============ -->
 <div id="cart-modal" class="modal">
   <div class="modal-content">
     <span id="close-cart" class="close">&times;</span>
@@ -29,7 +29,7 @@
   <!-- ACCIONES DERECHA -->
   <div class="top-actions">
 
-    <!-- SWITCH DARK MODE -->
+    <!-- SWITCH MODO OSCURO -->
     <div class="darkmode-switch">
       <input type="checkbox" id="darkToggle">
       <label for="darkToggle" class="switch">
@@ -39,7 +39,7 @@
     </div>
 
     <!-- BOTÓN DEL CARRITO -->
-    <button id="open-cart" class="cart-btn" onclick="openCart()">
+    <button id="open-cart" class="cart-btn">
       🛒
       <span id="cart-bubble" class="cart-bubble">0</span>
     </button>
@@ -62,6 +62,7 @@
 
   <!-- CATEGORÍAS -->
   <section class="categories">
+
     <div class="card" onclick="goToCategory('perfumes')">
       <img src="img/perfumes.jpg" alt="Perfumes" />
       <span>Perfumes</span>
@@ -81,6 +82,7 @@
       <img src="img/hogar.jpg" alt="Hogar" />
       <span>Hogar</span>
     </div>
+
   </section>
 
 </main>
@@ -91,7 +93,8 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
-
