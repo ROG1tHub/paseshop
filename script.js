@@ -163,4 +163,9 @@ if (darkToggle) {
     });
 }
 
+// Al cargar la página, actualizar burbuja del carrito en cualquier página
+document.addEventListener("DOMContentLoaded", () => {
+    updateCartBubble();
+});
+
 
