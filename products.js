@@ -36,7 +36,10 @@ const products = {
     /* Colonias Mujer */
     { name: "Sweet Honesty", desc: "Colonia 150ml", price: 4200, oldPrice: 7000, discount: 40, img: "img/colonia3.jpg" },
     { name: "Pasión Gitana", desc: "Colonia 150ml", price: 7000, oldPrice: null, img: "img/colonia4.jpg" },
-    { name: "Imari", desc: "Colonia 150ml", price: 7000, oldPrice: null, img: "img/colonia5.jpg" }
+    { name: "Imari", desc: "Colonia 150ml", price: 7000, oldPrice: null, img: "img/colonia5.jpg" },
+     { name: "Far Away", desc: "Loción perfumada para el cuerpo Far Away Shine 90ml", price: 5460, oldPrice: 7800, discount: 30, img: "img/colonia7.jpg" },
+     { name: "Far Away", desc: "Perfume de Mujer Purse Spray 15ml", price: 10080, oldPrice: 16800, discount: 40, img: "img/colonia8.jpg" },
+     { name: "Far Away", desc: "Eau de parfum Far Away Shine 50ml", price: 32220, oldPrice: 53700, discount: 40, img: "img/colonia9.jpg" },
   ],
 
   cuidado: [
@@ -56,6 +59,7 @@ const products = {
     { name: "Dispenser", desc: "Jabón líquido", price: 4500, img: "img/hogar2.jpg" }
   ]
 };
+
 
 
 
