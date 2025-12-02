@@ -10,6 +10,7 @@ const products = {
     { name: "300 km/h", desc: "Perfume para hombre 300 KM/H Electric. 100 ml.", price: 19470, oldPrice: 35400, discount: 45, img: "img/perfume2.jpg" },
     { name: "Exclusive", desc: "Perfume de Hombre Exclusive in Blue. 100 ml.", price: 36400, oldPrice: 56000, discount: 35, img: "img/perfume3.jpg" },
     { name: "Black Suede", desc: "Versión Hot 100 mL diseñada para hombre.", price: 32000, oldPrice: null, img: "img/perfume4.jpg" },
+     { name: "Wild Country", desc: "Eau de Toilette. Contenido: 120ml.", price: 15720, oldPrice: 26200, discount: 40, img: "img/colonia6.jpg" },
 
     /* Desodorantes Hombre */
     { name: "Wild Country", desc: "Desodorante roll-on 50ml.", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante7.jpg" },
@@ -41,17 +42,21 @@ const products = {
   cuidado: [
     { name: "Foot Works", desc: "Avon Aerosol Neutralizador Para Pies, 150ml", price: 7800, oldPrice: 12000, discount: 35, img: "img/cuidado1.jpg" },
     { name: "Avon Care", desc: "Crema para manos humectación esencial + Vitamina E. 75g.", price: 5500, img: "img/cuidado2.jpg" },
-    { name: "Avon Care Sun", desc: "Avon Care Sun Protector solar 50 FPS. 40g.", price: 13000, img: "img/cuidado3.jpg" },
+    { name: "Avon Care Sun+", desc: "Avon Care Sun Protector solar 50 FPS. 40g.", price: 13000, img: "img/cuidado3.jpg" },
      { name: "Avon naturals", desc: "Jabón líquido para manos refrescante. 250ml", price: 10150, oldPrice: 14500, discount: 30, img: "img/cuidado4.jpg" },
      { name: "Esmalte Color Trend", desc: "Avon Coleccion Minnie Rojo clásico 7ml", price: 2500, oldPrice: null, discount: null, img: "img/cuidado5.jpg" },
-     { name: "Esmalte Color Trend", desc: "Avon Coleccion Minnie Negro noche 7ml", price: 2500, oldPrice: null, discount: null, img: "img/cuidado6.jpg" }
+     { name: "Esmalte Color Trend", desc: "Avon Coleccion Minnie Negro noche 7ml", price: 2500, oldPrice: null, discount: null, img: "img/cuidado6.jpg" },
+     { name: "Avon Care", desc: "Loción Corporal Frutos Rojos. 400ml", price: 9500, oldPrice: null, discount: null, img: "img/cuidado7.jpg" },
+     { name: "Avon Care Sun+", desc: "Protector Solar 2 en 1 Rostro y Cuerpo FPS 50. 250g", price: 28125, oldPrice: 37500, discount: 25, img: "img/cuidado8.jpg" },
+     { name: "Avon Care", desc: "Loción Corporal Palta. 400ml", price: 9500, oldPrice: null, discount: null, img: "img/cuidado9.jpg" },
   ],
 
   hogarestilo: [
-    { name: "Organizador Multiuso", desc: "Ideal para habitación", price: 4500, img: "img/hogar1.jpg" },
+    { name: "Cucharas medidoras Carol", desc: "1 cuchara de 60 ml (1/4 de taza),1 cuchara de 80ml (1/3 de taza), 1 cuchara de 120ml (1/2 taza) , 1 cuchara 240ml (1 taza)", price: 5200, img: "img/hogarestilo1.jpg" },
     { name: "Dispenser", desc: "Jabón líquido", price: 4500, img: "img/hogar2.jpg" }
   ]
 };
+
 
 
 
