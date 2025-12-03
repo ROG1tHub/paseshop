@@ -60,9 +60,10 @@ const products = {
 
   hogarestilo: [
     { name: "Cucharas medidoras Carol", desc: "1 cuchara de 60 ml (1/4 de taza),1 cuchara de 80ml (1/3 de taza), 1 cuchara de 120ml (1/2 taza) , 1 cuchara 240ml (1 taza)", price: 5200, img: "img/hogarestilo1.jpg" },
-    { name: "Dispenser", desc: "Jabón líquido", price: 4500, img: "img/hogar2.jpg" }
+    { name: "Molde para hamburguesas", desc: "Molde Prensa Para Hamburguesa De Plástico Carol", price: 5500, img: "img/hogarestilo2.jpg" }
   ]
 };
+
 
 
 
